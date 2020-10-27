@@ -1,7 +1,7 @@
-import * as dotenv from "dotenv";
+import * as dotenv from 'dotenv';
 dotenv.config();
 
 export default {
-PORT:process.env.PORT,
-mongoDbUri: process.env.MONGODB_URI,
+  port: process.env.PORT,
+  mongoDbUri: process.env.MONGODB_URI,
 };

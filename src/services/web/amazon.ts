@@ -1,5 +1,5 @@
 import * as puppeteer from 'puppeteer';
-import amazonProd, { IAmazonproduct } from '../../models/amazon.product';
+import amazonProduct, { IAmazonproduct } from '../../models/amazon.product';
 
 let browser = null;
 let page = null;
@@ -44,7 +44,7 @@ export default {
       });
       console.log(productInfo);
       //save to db
-      const product: IAmazonproduct = new amazonProd({ ...productInfo });
+      const product: IAmazonproduct = new amazonProduct({ ...productInfo });
       await product.save();
     } catch (err) {
       console.log(err);

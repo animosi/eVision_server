@@ -2,7 +2,7 @@ import * as Joi from 'joi';
 import { Request, Response, NextFunction } from 'express';
 
 export default {
-  register: async (req: Request, res: Response, next: NextFunction) => {
+  registeration: async (req: Request, res: Response, next: NextFunction) => {
     const schema = Joi.object().keys({
       name: Joi.string().min(3).max(30).trim().required(),
       email: Joi.string()

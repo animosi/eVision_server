@@ -17,7 +17,7 @@ routes(app);
 
 app.listen(config.port, () => console.log(`Server Up : ${config.port}`));
 
-(async () => {
-  await amazon.initialize();
-  await amazon.getProduct(link);
-})();
+// (async () => {
+//   await amazon.initialize();
+//   await amazon.getProduct(link);
+// })();

@@ -6,4 +6,5 @@ export default {
   mongoDbUri: process.env.MONGODB_URI,
   instaPass: process.env.INSTA_PASS,
   instaUser: process.env.INSTA_USER,
+  token: process.env.TOKEN_KEY,
 };

@@ -34,4 +34,16 @@ export default {
     if (error) return res.status(400).send(error.details[0].message);
     next();
   },
+  amazonProduct: async (req: Request, res: Response, next: NextFunction) => {
+    const schema = Joi.object().keys({
+      title: Joi.string(),
+      price: Joi.string(),
+      manufacturer: Joi.string(),
+      rating: Joi.string(),
+      totalRatings: Joi.string(),
+    });
+    const { error } = await schema.validate(req.body);
+    if (error) return res.status(400).send(error.details[0].message);
+    next();
+  },
 };

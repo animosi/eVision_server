@@ -1,6 +1,7 @@
 import * as puppeteer from 'puppeteer';
 import amazonProduct, { IAmazonproduct } from '../../models/amazon.product';
 
+const link = `https://www.amazon.com/ASUS-ROG-Zephyrus-i7-10750H-Backlight/dp/B08DG196CC/ref=sr_1_8_mod_primary_new?crid=THGVYCUUE31A&dchild=1&keywords=g14+zephyrus&qid=1606117881&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=g14+z%2Caps%2C417&sr=8-8`;
 let browser = null;
 let page = null;
 
@@ -18,10 +19,10 @@ export default {
     }
     console.log('initialization complete');
   },
-  getProduct: async (url: string) => {
+  getProduct: async () => {
     console.log('seaching for product');
     try {
-      await page.goto(url, { waitUntil: 'networkidle2' });
+      await page.goto(link, { waitUntil: 'networkidle2' });
       // get product
       const productInfo: IAmazonproduct = await page.evaluate(() => {
         const title = document.querySelector<HTMLElement>('#productTitle')

@@ -1,6 +1,6 @@
 import { Router, Request, Response } from 'express';
 import validate from '../../validators/validator';
-import User, { IRequest } from '../../models/user';
+import User from '../../models/user';
 
 const router: Router = Router();
 

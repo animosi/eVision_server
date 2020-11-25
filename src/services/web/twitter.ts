@@ -30,3 +30,14 @@ export default {
     await browser.close();
   },
 };
+
+// while(tweetsArray.length < count) {
+//   await page.evaluate(`window.scrollTo(0, document.body.scrollHeight)`);
+//   await page.waitFor(3000);
+
+//   tweetsArray = await page.$$('#stream-items-id > li');
+
+//   if(lastTweetsArrayLength == tweetsArray.length) break;
+
+//   lastTweetsArrayLength = tweetsArray.length;
+// }
